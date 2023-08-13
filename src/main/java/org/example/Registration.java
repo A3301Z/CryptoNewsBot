@@ -12,12 +12,13 @@ public class Registration {
 	}
 
 	public void connectDB() throws SQLException, ClassNotFoundException {
-		String url = "jdbc:mysql://localhost:3306/cryptonewsbot";
-		String name = "root";
+		String url =  "jdbc:mysql://localhost:3306/cryptonewsbot";
+		String username = "root";
 		String pass = "Ghbdtn564896";
+
 		Class.forName("com.mysql.cj.jdbc.Driver");
-		try (Connection connection = DriverManager.getConnection(url, name, pass)) {
-			System.out.println("Connecting, people!");
+		try(Connection connection = DriverManager.getConnection(url, username, pass)) {
+			System.out.println("Connection successful");
 		}
 	}
 }
